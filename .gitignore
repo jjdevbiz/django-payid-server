@@ -4,6 +4,7 @@ __pycache__/
 *.so
 .Python
 *.sqlite3
+secrets.py
 
 # Packages
 *.egg
@@ -27,4 +28,3 @@ pip-log.txt
 # Unit test / coverage reports
 .coverage
 .tox
-
