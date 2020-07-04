@@ -16,16 +16,21 @@ class GetAllEntities(TestCase):
         LocalPayIdEntity.objects.create(
             name='Yamood')
         entities = LocalPayIdEntity.objects.all()
-        self.assertEqual(len(entities), 2)        
+        self.assertEqual(len(entities), 2)
 
-    def test_get_all_payIds(self):
-        # Get API response for this unofficial endpoint
-        response = client.get('/')
+    def test_get_PayIds(self):
+        # Get API response for some test PayIds
+        response = client.get('/Yamood/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         data = response.json()
-        self.assertEqual(len(data), 2)
-        self.assertEqual(data[0], 'rockhoward$payid.rockhoward.com')
-        self.assertEqual(data[1], 'yamood$payid.rockhoward.com')
+        # print(str(data))
+        self.assertEqual(data['payId'], 'yamood$payid.rockhoward.com')
+
+        response = client.get('/rockhoward/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        data = response.json()
+        # print(str(data))
+        self.assertEqual(data['payId'], 'rockhoward$payid.rockhoward.com')
 
 if __name__ == '__main__':
     unittest.main()
