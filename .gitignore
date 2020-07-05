@@ -4,7 +4,7 @@ __pycache__/
 *.so
 .Python
 *.sqlite3
-secrets.py
+dps_secrets.py
 
 # Packages
 *.egg
