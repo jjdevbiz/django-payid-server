@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 django = "*"
 djangorestframework = "*"
+payid-validator = {editable = true, path = "./../python-payid-validator"}
 
 [requires]
 python_version = "3.6"

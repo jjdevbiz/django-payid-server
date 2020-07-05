@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7170c759a0bf62fafec72413a891fce42967cc8adf408ead7bb3298544702e3d"
+            "sha256": "d49bf11580cfb21451c9574c2d8e8e12cfba08737d9b24ef6674547a57acf4e3"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -39,6 +39,10 @@
             ],
             "index": "pypi",
             "version": "==3.11.0"
+        },
+        "payid-validator": {
+            "editable": true,
+            "path": "./../python-payid-validator"
         },
         "pytz": {
             "hashes": [
