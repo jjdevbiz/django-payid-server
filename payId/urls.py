@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 from . import views
 
 router = DefaultRouter()
-router.register(r'^users/', views.LocalPayIdEntityViewSet)
+router.register(r'^users', views.LocalPayIdEntityViewSet)
 router.register(r'', views.LocalPayIdViewSet)
 
 # Wire up our API using automatic URL routing.
